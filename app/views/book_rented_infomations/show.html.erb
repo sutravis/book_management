@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rented date:</strong>
+  <%= @book_rented_infomation.rented_date %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @book_rented_infomation.due_date %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @book_rented_infomation.book_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @book_rented_infomation.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_book_rented_infomation_path(@book_rented_infomation) %> |
+<%= link_to 'Back', book_rented_infomations_path %>

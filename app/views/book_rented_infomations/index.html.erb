@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Book Rented Infomations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rented date</th>
+      <th>Due date</th>
+      <th>Book</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_rented_infomations.each do |book_rented_infomation| %>
+      <tr>
+        <td><%= book_rented_infomation.rented_date %></td>
+        <td><%= book_rented_infomation.due_date %></td>
+        <td><%= book_rented_infomation.book_id %></td>
+        <td><%= book_rented_infomation.user_id %></td>
+        <td><%= link_to 'Show', book_rented_infomation %></td>
+        <td><%= link_to 'Edit', edit_book_rented_infomation_path(book_rented_infomation) %></td>
+        <td><%= link_to 'Destroy', book_rented_infomation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book Rented Infomation', new_book_rented_infomation_path %>
